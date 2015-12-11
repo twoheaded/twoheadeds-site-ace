@@ -42,24 +42,6 @@ Meteor.startup(function () {
     }
 
     Meteor.methods({
-        //dlAndSave: function (url, name) {
-        //    var fileUrl = 'http://api.screenshotmachine.com/?key=f6b285&size=L&url=' + url;
-        //    var filename = '../../../../../public/images/' + name + '.png';
-        //
-        //    HTTP.call("GET", fileUrl, {npmRequestOptions: {encoding: null}}, function (err, result) {
-        //        if (!err) {
-        //            var fstream = Npm.require('fs');
-        //
-        //            fstream.writeFile(filename, result.content, function (err) {
-        //                if (!err) {
-        //                    console.log('writing file ok');
-        //                } else {
-        //                    console.log('error during writing file', err);
-        //                }
-        //            });
-        //        }
-        //    });
-        //},
         getSiteData: function (url) {
             return extractMeta(url);
         }

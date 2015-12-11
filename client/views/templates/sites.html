@@ -1,0 +1,14 @@
+<template name="sites">
+    <div class="jumbotron">
+        <h2>Post your site!</h2>
+        {{#unless currentUser}}
+            <p>You can post new websites if you are logged in</p>
+        {{/unless}}
+        {{#if currentUser}}
+            <a class="btn btn-default btn-lg btn-primary js-toggle-website-form" href="#">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Post site
+            </a>
+        {{/if}}
+    </div>
+    {{> website_list}}
+</template>

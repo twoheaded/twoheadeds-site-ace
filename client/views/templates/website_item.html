@@ -1,0 +1,25 @@
+<template name="website_item">
+    <div class="col-sm-4 col-md-3">
+        <div class="thumbnail">
+            <a href="/{{_id}}"><img src="{{img}}" alt="..."></a>
+            <h4><a class="title" href="/{{_id}}">{{title}}</a></h4>
+
+            <p class="description">
+                {{description}}
+            </p>
+            <div class="item-info">
+                <p><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Added
+                    by {{createdBy}} {{moFromNow createdOn withoutSuffix}}</p>
+            </div>
+            <hr>
+            <a href="#" class="btn btn-default btn-xs js-upvote">
+                <span class="glyphicon glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            </a>
+            <a href="#" class="btn btn-default btn-xs js-downvote">
+                <span class="glyphicon glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            </a>
+            <span class="badge votes">{{votes}}</span>
+        </div>
+        <!-- you will be putting your up and down vote buttons in here! -->
+    </div>
+</template>

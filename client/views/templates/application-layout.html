@@ -1,0 +1,18 @@
+<template name="ApplicationLayout">
+    {{> notifications}}
+    <header>
+        {{> yield "navbar"}}
+    </header>
+
+    <div class="container">
+        {{> yield "main"}}
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="pull-right">
+                <h4><a href="/">Site Ace</a></h4>  © 2015
+            </div>
+
+        </div>
+    </footer>
+</template>

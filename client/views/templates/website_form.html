@@ -1,0 +1,35 @@
+<template name="website_form">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Add new site</h4>
+                </div>
+                <form class="js-save-website-form">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="url">Site address</label>
+                            <input type="text" class="form-control" id="url" placeholder="http://www.mysite.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="Mysite" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" id="description" placeholder="I found this site really useful for ..." required>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>

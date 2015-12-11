@@ -1,0 +1,19 @@
+<template name="comments">
+    <p><span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"></span> {{ take key='title' default='comments'}}</p>
+
+    {{#if loginAction}}
+        <div class="alert alert-warning" role="alert">You need to login to {{loginAction}}</div>
+    {{/if}}
+
+    {{> textarea }}
+
+    <div class="media-list comments">
+        {{#each comment}}
+            {{> commentsSingleComment}}
+        {{/each}}
+    </div>
+
+    {{#if hasMoreComments}}
+        <button type="button" class="btn btn-success btn-lg btn-block loadmore-action">{{ take key='load-more' default='Load more comments' }}</button>
+    {{/if}}
+</template>

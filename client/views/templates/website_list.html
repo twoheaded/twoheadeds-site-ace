@@ -1,0 +1,13 @@
+<!-- template that displays several website items -->
+<template name="website_list">
+    <div class="row">
+        {{#unless websites.count}}
+            <div class="col-xs-12">
+                <h2>No results found</h2>
+            </div>
+        {{/unless}}
+        {{#each websites}}
+            {{>website_item}}
+        {{/each}}
+    </div>
+</template>

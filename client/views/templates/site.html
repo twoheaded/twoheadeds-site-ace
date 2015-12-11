@@ -1,0 +1,42 @@
+<template name="site">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="thumbnail">
+            <img src="{{img}}" alt="...">
+
+            <h1>{{title}}</h1>
+            <h4><a class="title" href="{{url}}">{{url}}</a></h4>
+            <hr>
+            <p>{{description}}</p>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Added
+                        by {{createdBy}}</p>
+
+                    <p><span class="glyphicon gglyphicon glyphicon-time"
+                             aria-hidden="true"></span> {{moFromNow createdOn withoutSuffix}}</p>
+
+                </div>
+                <div class="col-sm-5">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-default js-upvote">
+                            <span class="glyphicon glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </a>
+                        <a href="#" class="btn btn-default js-downvote">
+                            <span class="glyphicon glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        </a>
+                        <span class="badge votes">{{votes}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-12 comments-block">
+                    {{> commentsBox id=_id customTemplate="comments"}}
+                </div>
+            </div>
+        </div>
+
+    <!-- you will be putting your up and down vote buttons in here! -->
+
+</template>
